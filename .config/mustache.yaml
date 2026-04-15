@@ -1,0 +1,11 @@
+{
+  project:
+    {
+      creation-date: "2026-04-15",
+      description: "A GHC plugin that disables the use of the “layout rule” for significant whitespace in Haskell code.",
+      name: "no-layout-rule",
+      repo: "sellout/no-layout-rule",
+      summary: "Disable Haskell’s “layout rule”",
+    },
+  type: { name: "haskell" },
+}
