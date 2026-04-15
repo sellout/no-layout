@@ -1,8 +1,8 @@
-# no-layout-rule
+# `NoLayout`
 
-[![built with garnix](https://img.shields.io/endpoint?url=https%3A%2F%2Fgarnix.io%2Fapi%2Fbadges%2Fsellout%2Fno-layout-rule)](https://garnix.io/repo/sellout/no-layout-rule)
-[![GitHub CI](https://github.com/sellout/no-layout-rule/actions/workflows/build.yml/badge.svg)](https://github.com/sellout/no-layout-rule/actions/workflows/build.yml)
-[![Nix CI](https://nix-ci.com/badge/gh:sellout:no-layout-rule)](https://nix-ci.com/gh:sellout:no-layout-rule)
+[![built with garnix](https://img.shields.io/endpoint?url=https%3A%2F%2Fgarnix.io%2Fapi%2Fbadges%2Fsellout%2Fno-layout)](https://garnix.io/repo/sellout/no-layout)
+[![GitHub CI](https://github.com/sellout/no-layout/actions/workflows/build.yml/badge.svg)](https://github.com/sellout/no-layout/actions/workflows/build.yml)
+[![Nix CI](https://nix-ci.com/badge/gh:sellout:no-layout)](https://nix-ci.com/gh:sellout:no-layout)
 [![Project Manager](https://img.shields.io/badge/%20-Project%20Manager-%235277C3?logo=nixos&labelColor=%23cccccc)](https://sellout.github.io/project-manager/)
 
 Disable Haskell’s “layout rule”
@@ -11,11 +11,11 @@ A GHC plugin that disables the use of the “layout rule” for significant whit
 
 ## usage
 
-See [the package README](./core/README.md) for usage information.
+See [the plugin README](./core/README.md) for usage information.
 
 ## building
 
-Especially if you are unfamiliar with the haskell ecosystem, there is a Nix build (both with and without a flake). If you are unfamiliar with Nix, [Nix adjacent](...) can help you get things working in the shortest time and least effort possible.
+Especially if you are unfamiliar with the Haskell ecosystem, there is a Nix build (both with and without a flake). If you are unfamiliar with Nix, [Nix adjacent](...) can help you get things working in the shortest time and least effort possible.
 
 ### if you have `nix` installed
 

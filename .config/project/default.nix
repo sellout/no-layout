@@ -7,7 +7,7 @@
   ...
 }: {
   project = {
-    name = "no-layout-rule";
+    name = "no-layout";
     summary = "Disable Haskell’s “layout rule”";
     file = let
       ## Cabal requires many files to exist at the package level, rather than

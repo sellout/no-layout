@@ -22,7 +22,7 @@
   self,
   systems,
 }: let
-  pname = "no-layout-rule";
+  pname = "no-layout";
 
   supportedSystems = import systems;
 
@@ -117,14 +117,6 @@ in
       ## The versions that are older than those supported by Nix that we
       ## prefer to test against.
       nonNixTestedGhcVersions = [
-        "7.10.3"
-        "8.0.2"
-        "8.2.2"
-        "8.4.1"
-        "8.6.1"
-        "8.8.1"
-        "8.10.1"
-        "9.0.1"
         "9.2.1"
         "9.4.1"
         "9.6.1"

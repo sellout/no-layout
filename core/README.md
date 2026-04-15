@@ -1,14 +1,27 @@
-# no-layout-rule
+# `NoLayout` GHC plugin
 
-[![Hackage Version](https://img.shields.io/hackage/v/no-layout-rule)](https://hackage.haskell.org/package/no-layout-rule)
-[![Packaging status](https://repology.org/badge/tiny-repos/haskell:no-layout-rule.svg)](https://repology.org/project/haskell:no-layout-rule/versions)
-[![latest packaged versions](https://repology.org/badge/latest-versions/haskell:no-layout-rule.svg)](https://repology.org/project/haskell:no-layout-rule/versions)
+[![Hackage Version](https://img.shields.io/hackage/v/no-layout)](https://hackage.haskell.org/package/no-layout)
+[![Packaging status](https://repology.org/badge/tiny-repos/haskell:no-layout.svg)](https://repology.org/project/haskell:no-layout/versions)
+[![latest packaged versions](https://repology.org/badge/latest-versions/haskell:no-layout.svg)](https://repology.org/project/haskell:no-layout/versions)
 
 Disable Haskell’s “layout rule”
 
 A GHC plugin that disables the use of the “layout rule” for significant whitespace in Haskell code.
 
 ## usage
+
+**CAVEAT**: This doesn’t work with Ormolu (or probably other formatters), which will strip explicit brackets unless they’re used to collapse an expression to a single line. There’s [hope for Fourmolu](https://github.com/fourmolu/fourmolu/issues/60) (add a “👍” to that issue if this interests you).
+
+Add
+
+```cabal
+  build-depends: no-layout ^>= 0.0.1
+  ghc-options: -fplugin NoLayout
+```
+
+to any stanzas (`library`, `executable` `common`, etc.) you want to enforce this in.
+
+You can additionally control where layout is allowed with `-fplugin-opt NoLayout:allowIn=HsModule,ClassDecl` (which will allow layout for modules and class declarations, but not `do` (`HsDo`) or let & where bindings (`HsValBinds`)).
 
 ## versioning
 
@@ -92,7 +105,7 @@ Yes, in development, `-Werror` is often (and should be) used. However, that just
 
 ## licensing
 
-This package is licensed under [The GNU AGPL 3.0 only](./LICENSE). If you need a license for usage that isn’t covered under the AGPL, please contact [Greg Pfeil](mailto:greg@technomadic.org?subject=licensing%20no-layout-rule).
+This package is licensed under [The GNU AGPL 3.0 only](./LICENSE). If you need a license for usage that isn’t covered under the AGPL, please contact [Greg Pfeil](mailto:greg@technomadic.org?subject=licensing%20no-layout).
 
 You should review the [license report](docs/license-report.md) for details about dependency licenses.
 

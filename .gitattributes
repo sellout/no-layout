@@ -1,7 +1,7 @@
 /.cache/git/config linguist-generated
 /.cache/git/hooks/pre-push linguist-generated
-/.cache/vale/Vocab/no-layout-rule/accept.txt linguist-generated
-/.cache/vale/config/vocabularies/no-layout-rule/accept.txt linguist-generated
+/.cache/vale/Vocab/no-layout/accept.txt linguist-generated
+/.cache/vale/config/vocabularies/no-layout/accept.txt linguist-generated
 /.dir-locals.el linguist-generated
 /.editorconfig linguist-generated
 /.envrc linguist-generated

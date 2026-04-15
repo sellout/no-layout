@@ -22,4 +22,4 @@ program-options
 tests: True
 
 packages:
-  ./core/no-layout-rule.cabal
+  ./core/no-layout.cabal
