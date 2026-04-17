@@ -10,6 +10,10 @@ jobs: $ncpus
 if impl(ghc >= 9.8)
   semaphore: True
 
+constraints:
+  -- 0.2.0 is the first version that lets us ignore violations
+  no-recursion >= 0.2.0,
+
 flags:
   -- Ensure development of this project always uses linters, even if it causes
   -- the solver to fail.

@@ -146,7 +146,7 @@ common defaults
       no-recursion,
     ghc-options:
       -fplugin=NoRecursion
-    if impl(ghc >= 9.4)
+    if impl(ghc >= 9.4.5)
       build-depends:
         henforcer ^>= {1.0.0},
       ghc-options:
