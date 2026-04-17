@@ -65,12 +65,9 @@ import safe "base" Data.String (String)
 import safe "base" Data.Typeable (cast)
 import safe "base" System.IO (IO)
 import safe "base" Text.Show (Show)
-import "ghc" GHC.Hs
-  ( HsLocalBindsLR,
-    HsParsedModule,
-    hpm_module,
-  )
+import "ghc" GHC.Hs (HsLocalBindsLR, HsParsedModule, hpm_module)
 import "ghc" GHC.Hs.Extension (GhcPs)
+import "ghc" GHC.Parser.Annotation (AnnList, EpAnn (EpAnn), al_anchor)
 import "ghc" GHC.Plugins
   ( CommandLineOption,
     Hsc,
@@ -96,33 +93,24 @@ import "ghc" GHC.Utils.Outputable
     ($$),
     (<+>),
   )
-import safe "ghc" GHC.Utils.Outputable qualified as Out
+import "ghc" GHC.Utils.Outputable qualified as Out
 import "ghc" Language.Haskell.Syntax.Expr (HsExpr (HsDo))
 #if MIN_VERSION_ghc(9, 12, 0)
 import safe "base" Data.Bool ((||))
 import "ghc" GHC.Parser.Annotation
-  ( AnnList (al_anchor, al_brackets),
-    AnnListBrackets (ListNone),
-    EpAnn (EpAnn),
+  ( AnnListBrackets (ListNone),
     EpaLocation,
     EpToken,
+    al_brackets,
   )
 #elif MIN_VERSION_ghc(9, 10, 0)
 import safe "base" Data.Maybe (isNothing)
-import "ghc" GHC.Parser.Annotation
-  ( AnnList,
-    EpAnn (EpAnn),
-    al_anchor,
-    al_open,
-  )
+import "ghc" GHC.Parser.Annotation  (al_open)
 #else
 import safe "base" Data.Maybe (isNothing)
 import "ghc" GHC.Parser.Annotation
-  ( AnnList,
-    EpAnn (EpAnn),
-    SrcSpanAnn' (SrcSpanAnn),
+  ( SrcSpanAnn' (SrcSpanAnn),
     SrcSpanAnnL,
-    al_anchor,
     al_open,
   )
 #endif
